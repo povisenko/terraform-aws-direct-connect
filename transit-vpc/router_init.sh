@@ -26,7 +26,7 @@ usermod -a -G docker ubuntu
 
 chown -R ubuntu:ubuntu /home/ubuntu/.docker/
 
-# Create restart script
+# Create HAproxy configuration
 cat > /home/ubuntu/haproxy.cfg <<- "EOF"
        global
            log stdout local0
@@ -67,5 +67,5 @@ cat > /home/ubuntu/haproxy.cfg <<- "EOF"
            server domain2 domain-name-2.internal.com:443 ssl verify none
 EOF
 
-
+#Launch router
 docker run -d --restart always --name haproxy --net=host -v /home/ubuntu:/usr/local/etc/haproxy:ro haproxy:2.1-alpine
