@@ -1,6 +1,4 @@
 ## AWS Direct Connect managed by Terraform
-
-all details in the code
-
 Repository prepared as accompanied code snippets for a paper: 
-//TODO insert link for the article
+
+[How to Extend Your AWS Infrastructure with Direct Connect Using Terraform](https://www.freecodecamp.org/news/how-to-extend-your-aws-infrastructure/)
